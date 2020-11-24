@@ -1,0 +1,31 @@
+// Exercise 6
+
+@mixin arrow($color, $direction, $size) {
+  border-top: $size/2 solid transparent;
+  border-bottom: $size/2 solid transparent;
+  border-#{$direction}: $size solid $color;
+
+  @if $direction==bottom {
+    transform: rotate(-90deg);
+  }
+
+  @if $direction==top {
+    transform: rotate(90deg);
+  }
+
+  @if $direction==right {
+    transform: rotate(180deg);
+  }
+
+  @if $direction==left {
+    transform: rotate(-180deg);
+  }
+}
+
+.arrow {
+  position: absolute;
+  display: block;
+  top: 1100px;
+  left: 100px;
+  @include arrow(purple, left, 50px);
+}

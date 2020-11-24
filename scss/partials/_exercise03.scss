@@ -1,0 +1,22 @@
+// Exercise 3
+
+.container {
+   width: 100%;
+}
+
+.row::before,
+.row::after {
+   content: "";
+   display: block;
+   clear: both;
+}
+
+$col-count:7;
+
+@for $i from 1 to $col-count {
+   .col-#{$i} {
+      float: left;
+      width: 100% /$col-count*$i;
+      min-height: 1px;
+   }
+}

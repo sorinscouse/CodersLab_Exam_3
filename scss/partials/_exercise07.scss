@@ -1,0 +1,37 @@
+// Exercise 7
+
+.section-3 img {
+   background-size: contain;
+}
+
+.section-3 {
+   @media(min-width: 1025px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+         width: 600px;
+         height: auto;
+      }
+   }
+
+   @media(min-width: 768px) and (max-width: 1024px) {
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+         width: 200px;
+         height: auto;
+         align-self: flex-start;
+         flex: 0 0 auto;
+      }
+   }
+
+   @media(max-width: 767px) {
+      img {
+         width: 100%;
+         height: auto;
+      }
+   }
+}

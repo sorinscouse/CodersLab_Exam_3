@@ -1,0 +1,39 @@
+// Exercise 5
+
+.rainbow {
+  width: 100%;
+
+  @for $k from 1 to 7 {
+    .col-#{$k} {
+      height: 1000px;
+    }
+  }
+
+  .a {
+    background-color: map-get($rainbow, red);
+  }
+
+  .b {
+    background-color: map-get($rainbow, orange);
+  }
+
+  .c {
+    background-color: map-get($rainbow, yellow);
+  }
+
+  .d {
+    background-color: map-get($rainbow, green);
+  }
+
+  .e {
+    background-color: map-get($rainbow, blue);
+  }
+
+  .f {
+    background-color: map-get($rainbow, indigo);
+  }
+
+  .g {
+    background-color: map-get($rainbow, violet);
+  }
+}
